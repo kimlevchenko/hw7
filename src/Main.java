@@ -49,33 +49,29 @@ public class Main {
         int birthRate = peopleCountry / 1000 * 17;
         int deathRate = peopleCountry / 1000 * 8;
         for (int i = 1; i <= 10; i++) {
-            int totalPeople = peopleCountry + birthRate - deathRate;
-            System.out.println("Год " + i + ", численность населения составляет " + totalPeople + " человек");
+            peopleCountry = peopleCountry + birthRate - deathRate;
+            System.out.println("Год " + i + ", численность населения составляет " + peopleCountry + " человек");
         }
     }
 
     public static void task4() {
         System.out.println("Задача 4");
-        int deposit = 15_000;
-        double totalMoney = 0;
+        double deposit = 15_000;
         double precent = 0.07;
-        for (int i = 1; totalMoney <= 12_000_000; i++) {
-            totalMoney = totalMoney + deposit;
-            totalMoney = totalMoney + totalMoney * precent;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + Math.round(totalMoney) + " рублей");
+        for (int i = 1; deposit <= 12_000_000; i++) {
+            deposit = deposit + deposit * precent;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + Math.round(deposit) + " рублей");
         }
     }
 
     public static void task5() {
         System.out.println("Задача 5");
         double deposit = 15_000;
-        double totalMoney = 0;
         double precent = 0.07;
-        for (int i = 1; totalMoney <= 12_000_000; i++) {
-            totalMoney = totalMoney + deposit;
-            totalMoney = totalMoney + totalMoney * precent;
+        for (int i = 1; deposit <= 12_000_000; i++) {
+            deposit = deposit + deposit * precent;
             if (i % 6 == 0) {
-                System.out.println("Месяц " + i + ", сумма накоплений равна " + Math.round(totalMoney) + " рублей");
+                System.out.println("Месяц " + i + ", сумма накоплений равна " + Math.round(deposit) + " рублей");
             }
         }
     }
@@ -83,13 +79,11 @@ public class Main {
     public static void task6() {
         System.out.println("Задача 6");
         double deposit = 15_000;
-        double totalMoney = 0;
         double precent = 0.07;
         for (int i = 1; i <= 9 * 12; i++) {
-            totalMoney = totalMoney + deposit;
-            totalMoney = totalMoney + totalMoney * precent;
+            deposit = deposit + deposit * precent;
             if (i % 6 == 0) {
-                System.out.println("Месяц " + i + ", сумма накоплений равна " + Math.round(totalMoney) + " рублей");
+                System.out.println("Месяц " + i + ", сумма накоплений равна " + Math.round(deposit) + " рублей");
             }
         }
     }
